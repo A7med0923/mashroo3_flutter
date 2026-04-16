@@ -1,10 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:mashroo3_flutter/screens/uniscreen.dart';
 import 'package:mashroo3_flutter/widgets/custom_card.dart';
 import 'details_screen.dart';
 
-class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
+class HomeScreen extends StatefulWidget {
+  final Function(int) changePage;
+  const HomeScreen({super.key, required this.changePage});
 
+  @override
+  State<HomeScreen> createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
+  int selectedindex = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -15,41 +23,45 @@ class HomeScreen extends StatelessWidget {
         ),
       ),
       body: Container(
-        child: Column(
-          children: [
-            Container(
-              alignment: Alignment.topRight,
-              child: ListTile(
-                title: Text("ابرز الجامعات", style: TextStyle(fontSize: 20)),
-                trailing: IconButton(
-                  onPressed: () {},
-                  icon: Icon(Icons.arrow_right_alt_outlined),
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              Container(
+                alignment: Alignment.topRight,
+                child: ListTile(
+                  title: Text("ابرز الجامعات", style: TextStyle(fontSize: 20)),
+                  trailing: IconButton(
+                    onPressed: () {
+                      widget.changePage(1);
+                    },
+                    icon: Icon(Icons.arrow_forward_ios_rounded),
+                  ),
                 ),
               ),
-            ),
-            SingleChildScrollView(
-              scrollDirection: Axis.horizontal,
-              child: Row(
-                children: [
-                  homebagecard(
-                    colorofuni: shabwacolor,
-                    nameofuni: "جامعة شبوة",
-                    nameofpage: aa(),
-                  ),
-                  homebagecard(
-                    colorofuni: Colors.yellowAccent,
-                    nameofuni: "جامعة القران",
-                    nameofpage: aa(),
-                  ),
-                  homebagecard(
-                    colorofuni: Colors.greenAccent,
-                    nameofuni: "جامعة عدن",
-                    nameofpage: aa(),
-                  ),
-                ],
+              SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  children: [
+                    homebagecard(
+                      colorofuni: shabwacolor,
+                      nameofuni: "جامعة شبوة",
+                      nameofpage: aa(),
+                    ),
+                    homebagecard(
+                      colorofuni: Colors.yellowAccent,
+                      nameofuni: "جامعة القران",
+                      nameofpage: aa(),
+                    ),
+                    homebagecard(
+                      colorofuni: Colors.greenAccent,
+                      nameofuni: "جامعة عدن",
+                      nameofpage: aa(),
+                    ),
+                  ],
+                ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );
