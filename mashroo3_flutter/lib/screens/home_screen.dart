@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:mashroo3_flutter/screens/uniscreen.dart';
 import 'package:mashroo3_flutter/widgets/custom_card.dart';
 import 'details_screen.dart';
 
