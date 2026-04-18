@@ -1,16 +1,18 @@
 import 'package:flutter/material.dart';
 
 class UniCard extends StatelessWidget {
-  String nameofuni;
-  String countofcolleg;
-  Color colorofcard;
-  String imageofcard;
+  final String nameofuni;
+  final String countofcolleg;
+  final Color colorofcard;
+  final String imageofcard;
+  final VoidCallback ontap;
   UniCard({
     super.key,
     required this.colorofcard,
     required this.imageofcard,
     required this.nameofuni,
-    required this.countofcolleg
+    required this.countofcolleg,
+    required this.ontap,
   });
   @override
   Widget build(BuildContext context) {
@@ -46,7 +48,9 @@ class UniCard extends StatelessWidget {
           ClipRRect(
             borderRadius: BorderRadius.circular(40),
             child: MaterialButton(
-              onPressed: () {},
+              onPressed: () {
+                ontap;
+              },
               color: Colors.green,
               child: Icon(Icons.arrow_forward_ios_rounded),
             ),

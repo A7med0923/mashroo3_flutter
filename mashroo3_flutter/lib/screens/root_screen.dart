@@ -1,9 +1,7 @@
-import 'dart:ffi';
-import 'dart:ui';
-
 import 'package:mashroo3_flutter/screens/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:mashroo3_flutter/screens/details_screen.dart';
+import 'package:mashroo3_flutter/screens/inst_screen.dart';
 import 'package:mashroo3_flutter/screens/uniscreen.dart';
 
 class RootScreen extends StatefulWidget {
@@ -22,7 +20,7 @@ class _RootScreenState extends State<RootScreen> {
   
   @override
   Widget build(BuildContext context) {
-    List<Widget> pages = [HomeScreen(changePage: changePage),UniScreen(), aa(), aa()];
+    List<Widget> pages = [HomeScreen(changePage: changePage),UniScreen(), InstScreen(), aa()];
     return Scaffold(
       extendBody: true,
       bottomNavigationBar: Padding(

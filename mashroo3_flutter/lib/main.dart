@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:mashroo3_flutter/screens/home_screen.dart';
 import 'package:mashroo3_flutter/screens/root_screen.dart';
 
 void main() {

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:mashroo3_flutter/screens/major_screen.dart';
 import 'package:mashroo3_flutter/widgets/custom_card.dart';
+import 'package:mashroo3_flutter/widgets/custom_major_card.dart';
 import 'details_screen.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -44,7 +46,43 @@ class _HomeScreenState extends State<HomeScreen> {
                     homebagecard(
                       colorofuni: shabwacolor,
                       nameofuni: "جامعة شبوة",
-                      nameofpage: aa(),
+                      nameofpage: MajorScreen(
+                        title: "التخصصات",
+                        child: MajorCard(
+                          items: [
+                            ItemData(
+                              countofyears: "Ddd",
+                              imageofcard: "images/shabwa1.png",
+                              nameofmajor: "fhwaghw",
+                              onTap: () {},
+                            ),
+                            ItemData(
+                              countofyears: "Ddd",
+                              imageofcard: "images/shabwa1.png",
+                              nameofmajor: "fhwaghw",
+                              onTap: () {},
+                            ),
+                            ItemData(
+                              countofyears: "Ddd",
+                              imageofcard: "images/shabwa1.png",
+                              nameofmajor: "fhwaghw",
+                              onTap: () {},
+                            ),
+                            ItemData(
+                              countofyears: "Ddd",
+                              imageofcard: "images/shabwa1.png",
+                              nameofmajor: "fhwaghw",
+                              onTap: () {},
+                            ),
+                            ItemData(
+                              countofyears: "Ddd",
+                              imageofcard: "images/shabwa1.png",
+                              nameofmajor: "fhwaghw",
+                              onTap: () {},
+                            ),
+                          ],
+                        ),
+                      ),
                     ),
                     homebagecard(
                       colorofuni: Colors.yellowAccent,
