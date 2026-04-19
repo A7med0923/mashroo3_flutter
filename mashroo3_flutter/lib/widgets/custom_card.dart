@@ -9,7 +9,7 @@ class homebagecard extends StatelessWidget {
   });
   final Color colorofuni;
   final String nameofuni;
-  final Widget nameofpage;
+  final Widget? nameofpage;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -19,7 +19,7 @@ class homebagecard extends StatelessWidget {
         onTap: () {
           Navigator.of(
             context,
-          ).push(MaterialPageRoute(builder: (context) => nameofpage));
+          ).push(MaterialPageRoute(builder: (context) => nameofpage ?? Container()));
         },
         child: Card(
           child: Column(
@@ -39,7 +39,7 @@ class homebagecard extends StatelessWidget {
               ),
               Transform.translate(
                 offset: Offset(-10, 20),
-                child: Text("$nameofuni", style: TextStyle(fontSize: 30)),
+                child: Text("$nameofuni", style: TextStyle(fontSize: 25)),
               ),
             ],
           ),

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class MajorScreen extends StatelessWidget {
-  final Widget child;
+  final Widget? child;
   final String title;
   const MajorScreen({super.key, required this.child, required this.title});
   @override

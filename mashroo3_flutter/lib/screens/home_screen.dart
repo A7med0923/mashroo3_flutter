@@ -97,6 +97,116 @@ class _HomeScreenState extends State<HomeScreen> {
                   ],
                 ),
               ),
+
+              Container(
+                alignment: Alignment.topRight,
+                child: ListTile(
+                  title: Text("ابرز الكليات", style: TextStyle(fontSize: 20)),
+                  trailing: IconButton(
+                    onPressed: () {},
+                    icon: Icon(Icons.arrow_forward_ios_rounded),
+                  ),
+                ),
+              ),
+              SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  children: [
+                    homebagecard(
+                      colorofuni: Colors.green,
+                      nameofuni: "كلية التربية",
+                      nameofpage: aa(),
+                    ),
+                    homebagecard(
+                      colorofuni: Colors.green,
+                      nameofuni: "كلية التربية",
+                      nameofpage: aa(),
+                    ),
+                    homebagecard(
+                      colorofuni: Colors.green,
+                      nameofuni: "كلية التربية",
+                      nameofpage: aa(),
+                    ),
+                  ],
+                ),
+              ),
+
+              Container(
+                alignment: Alignment.topRight,
+                child: ListTile(
+                  title: Text("ابرز التخصصات", style: TextStyle(fontSize: 20)),
+                  trailing: IconButton(
+                    onPressed: () {},
+                    icon: Icon(Icons.arrow_forward_ios_rounded),
+                  ),
+                ),
+              ),
+              SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  children: [
+                    homebagecard(
+                      colorofuni: Colors.tealAccent,
+                      nameofuni: "تكنولوجيا المعلومات",
+                      nameofpage: aa(),
+                    ),
+                    homebagecard(
+                      colorofuni: Colors.tealAccent,
+                      nameofuni: "تكنولوجيا المعلومات",
+                      nameofpage: aa(),
+                    ),
+                    homebagecard(
+                      colorofuni: Colors.tealAccent,
+                      nameofuni: "تكنولوجيا المعلومات",
+                      nameofpage: aa(),
+                    ),
+                    homebagecard(
+                      colorofuni: Colors.tealAccent,
+                      nameofuni: "تكنولوجيا المعلومات",
+                      nameofpage: aa(),
+                    ),
+                  ],
+                ),
+              ),
+              Container(
+                alignment: Alignment.topRight,
+                child: ListTile(
+                  title: Text("ابرز المعاهد", style: TextStyle(fontSize: 20)),
+                  trailing: IconButton(
+                    onPressed: () {
+                      widget.changePage(2);
+                    },
+                    icon: Icon(Icons.arrow_forward_ios_rounded),
+                  ),
+                ),
+              ),
+              SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  children: [
+                    homebagecard(
+                      colorofuni: Colors.tealAccent,
+                      nameofuni: "تكنولوجيا المعلومات",
+                      nameofpage: aa(),
+                    ),
+                    homebagecard(
+                      colorofuni: Colors.tealAccent,
+                      nameofuni: "تكنولوجيا المعلومات",
+                      nameofpage: aa(),
+                    ),
+                    homebagecard(
+                      colorofuni: Colors.tealAccent,
+                      nameofuni: "تكنولوجيا المعلومات",
+                      nameofpage: aa(),
+                    ),
+                    homebagecard(
+                      colorofuni: Colors.tealAccent,
+                      nameofuni: "تكنولوجيا المعلومات",
+                      nameofpage: aa(),
+                    ),
+                  ],
+                ),
+              ),
             ],
           ),
         ),

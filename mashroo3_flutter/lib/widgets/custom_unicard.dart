@@ -49,7 +49,7 @@ class UniCard extends StatelessWidget {
             borderRadius: BorderRadius.circular(40),
             child: MaterialButton(
               onPressed: () {
-                ontap;
+                ontap();
               },
               color: Colors.green,
               child: Icon(Icons.arrow_forward_ios_rounded),
