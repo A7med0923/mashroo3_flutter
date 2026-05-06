@@ -49,7 +49,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       nameofpage: ShabwaUniScreen(),
                     ),
                     homebagecard(
-                      colorofuni: Colors.yellowAccent,
+                      colorofuni: const Color.fromARGB(255, 0, 41, 81),
                       nameofuni: "جامعة القران",
                       nameofpage: aa(),
                     ),
