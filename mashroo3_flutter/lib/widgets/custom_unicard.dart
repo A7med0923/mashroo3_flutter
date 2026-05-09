@@ -16,8 +16,7 @@ class UniCard extends StatelessWidget {
   });
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-      child: GestureDetector(
+    return  GestureDetector(
         onTap: () {
           ontap();
         },
@@ -36,7 +35,6 @@ class UniCard extends StatelessWidget {
             ],
           ),
         ),
-      ),
     );
   }
 }

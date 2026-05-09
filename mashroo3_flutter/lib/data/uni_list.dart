@@ -11,7 +11,7 @@ List<Universities> unilist = [
   ),
   Universities(
     colorofcard: Colors.blue,
-    countofcolleg: "6 كليات",
+    countofcolleg: "كليات 3",
     imageofcard: "images/shabwa1.png",
     nameofuni: "جامعة شبوة",
     ontap: () {},
