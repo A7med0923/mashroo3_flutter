@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:mashroo3_flutter/utils/constants.dart';
 
 class homebagecard extends StatelessWidget {
   const homebagecard({
     super.key,
-    required this.colorofuni,
     required this.nameofuni,
     required this.nameofpage,
+    required this.imageofuni,
   });
-  final Color colorofuni;
   final String nameofuni;
   final Widget? nameofpage;
+  final String imageofuni;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -17,11 +18,12 @@ class homebagecard extends StatelessWidget {
       height: 200,
       child: GestureDetector(
         onTap: () {
-          Navigator.of(
-            context,
-          ).push(MaterialPageRoute(builder: (context) => nameofpage ?? Container()));
+          Navigator.of(context).push(
+            MaterialPageRoute(builder: (context) => nameofpage ?? Container()),
+          );
         },
         child: Card(
+          color: thrdcolor,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.end,
             children: [
@@ -32,8 +34,8 @@ class homebagecard extends StatelessWidget {
                   child: Container(
                     width: 100,
                     height: 100,
-                    color: colorofuni,
-                    child: Image.asset("images/shabwa1.png"),
+                    color: maincolor.withValues(alpha: 0.6),
+                    child: Image.asset(imageofuni),
                   ),
                 ),
               ),

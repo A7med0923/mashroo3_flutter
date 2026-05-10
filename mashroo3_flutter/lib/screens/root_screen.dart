@@ -2,6 +2,7 @@ import 'package:mashroo3_flutter/screens/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:mashroo3_flutter/screens/inst_screen.dart';
 import 'package:mashroo3_flutter/screens/uniscreen.dart';
+import 'package:mashroo3_flutter/utils/constants.dart';
 
 class RootScreen extends StatefulWidget {
   @override
@@ -35,14 +36,14 @@ class _RootScreenState extends State<RootScreen> {
         },
         selectedFontSize: 10,
         // ignore: deprecated_member_use
-        backgroundColor: const Color.fromARGB(149, 3, 37, 85),
+        backgroundColor: sccolor,
         selectedIconTheme: const IconThemeData(size: 40),
         unselectedIconTheme: const IconThemeData(size: 40),
         enableFeedback: false,
         currentIndex: selectedindex,
         type: BottomNavigationBarType.fixed,
-        selectedItemColor: const Color.fromARGB(255, 134, 153, 217),
-        unselectedItemColor: Colors.grey.withValues(alpha: 0.3),
+        selectedItemColor: maincolor,
+        unselectedItemColor: thrdcolor,
 
         items: [
           BottomNavigationBarItem(icon: Icon(Icons.home), label: "الرئيسية"),

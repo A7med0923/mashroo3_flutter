@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mashroo3_flutter/data/uni_list.dart';
+import 'package:mashroo3_flutter/utils/constants.dart';
 import 'package:mashroo3_flutter/widgets/custom_unicard.dart';
 
 class Uniscreen extends StatelessWidget {
@@ -8,6 +9,11 @@ class Uniscreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: sccolor,
+        title: Text("الجامعات",style: TextStyle(fontSize: 20,color: maincolor),),
+      ),
+      backgroundColor: maincolor,
       body: GridView.builder(
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: 2,

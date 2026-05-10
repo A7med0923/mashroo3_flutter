@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:mashroo3_flutter/screens/mojtm3_uni_screen.dart';
+import 'package:mashroo3_flutter/screens/quran_uni_screen.dart';
 import 'package:mashroo3_flutter/screens/shabwa_uni_screen.dart';
+import 'package:mashroo3_flutter/utils/constants.dart';
 import 'package:mashroo3_flutter/widgets/custom_card.dart';
 import 'details_screen.dart';
 
@@ -16,10 +19,12 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: maincolor,
       appBar: AppBar(
-        title: const Text(
+        backgroundColor: sccolor,
+        title: Text(
           'دليل الطالب الجامعي ',
-          style: TextStyle(fontSize: 20, color: Color.fromRGBO(30, 40, 200, 1)),
+          style: TextStyle(fontSize: 20, color: maincolor),
         ),
       ),
       body: Container(
@@ -30,7 +35,13 @@ class _HomeScreenState extends State<HomeScreen> {
               Container(
                 alignment: Alignment.topRight,
                 child: ListTile(
-                  title: Text("ابرز الجامعات", style: TextStyle(fontSize: 20)),
+                  title: Text(
+                    "ابرز الجامعات",
+                    style: TextStyle(
+                      fontSize: 20,
+                      color: const Color.fromARGB(255, 45, 62, 79),
+                    ),
+                  ),
                   trailing: IconButton(
                     onPressed: () {
                       widget.changePage(1);
@@ -44,90 +55,19 @@ class _HomeScreenState extends State<HomeScreen> {
                 child: Row(
                   children: [
                     homebagecard(
-                      colorofuni: shabwacolor,
+                      imageofuni: "images/shabwa1.png",
                       nameofuni: "جامعة شبوة",
                       nameofpage: ShabwaUniScreen(),
                     ),
                     homebagecard(
-                      colorofuni: const Color.fromARGB(255, 0, 41, 81),
                       nameofuni: "جامعة القران",
-                      nameofpage: aa(),
+                      nameofpage: QuranUniScreen(),
+                      imageofuni: "images/quran.png",
                     ),
                     homebagecard(
-                      colorofuni: Colors.greenAccent,
-                      nameofuni: "جامعة عدن",
-                      nameofpage: aa(),
-                    ),
-                  ],
-                ),
-              ),
-
-              Container(
-                alignment: Alignment.topRight,
-                child: ListTile(
-                  title: Text("ابرز الكليات", style: TextStyle(fontSize: 20)),
-                  trailing: IconButton(
-                    onPressed: () {},
-                    icon: Icon(Icons.arrow_forward_ios_rounded),
-                  ),
-                ),
-              ),
-              SingleChildScrollView(
-                scrollDirection: Axis.horizontal,
-                child: Row(
-                  children: [
-                    homebagecard(
-                      colorofuni: Colors.green,
-                      nameofuni: "كلية التربية",
-                      nameofpage: aa(),
-                    ),
-                    homebagecard(
-                      colorofuni: Colors.green,
-                      nameofuni: "كلية التربية",
-                      nameofpage: aa(),
-                    ),
-                    homebagecard(
-                      colorofuni: Colors.green,
-                      nameofuni: "كلية التربية",
-                      nameofpage: aa(),
-                    ),
-                  ],
-                ),
-              ),
-
-              Container(
-                alignment: Alignment.topRight,
-                child: ListTile(
-                  title: Text("ابرز التخصصات", style: TextStyle(fontSize: 20)),
-                  trailing: IconButton(
-                    onPressed: () {},
-                    icon: Icon(Icons.arrow_forward_ios_rounded),
-                  ),
-                ),
-              ),
-              SingleChildScrollView(
-                scrollDirection: Axis.horizontal,
-                child: Row(
-                  children: [
-                    homebagecard(
-                      colorofuni: Colors.tealAccent,
-                      nameofuni: "تكنولوجيا المعلومات",
-                      nameofpage: aa(),
-                    ),
-                    homebagecard(
-                      colorofuni: Colors.tealAccent,
-                      nameofuni: "تكنولوجيا المعلومات",
-                      nameofpage: aa(),
-                    ),
-                    homebagecard(
-                      colorofuni: Colors.tealAccent,
-                      nameofuni: "تكنولوجيا المعلومات",
-                      nameofpage: aa(),
-                    ),
-                    homebagecard(
-                      colorofuni: Colors.tealAccent,
-                      nameofuni: "تكنولوجيا المعلومات",
-                      nameofpage: aa(),
+                      nameofuni: "كلية المجتمع",
+                      nameofpage: Mojtm3UniScreen(),
+                      imageofuni: "images/mojtm3.png",
                     ),
                   ],
                 ),
@@ -149,24 +89,24 @@ class _HomeScreenState extends State<HomeScreen> {
                 child: Row(
                   children: [
                     homebagecard(
-                      colorofuni: Colors.tealAccent,
-                      nameofuni: "تكنولوجيا المعلومات",
+                      nameofuni: "",
                       nameofpage: aa(),
+                      imageofuni: "images/shabwa1.png",
                     ),
                     homebagecard(
-                      colorofuni: Colors.tealAccent,
-                      nameofuni: "تكنولوجيا المعلومات",
+                      nameofuni: "",
                       nameofpage: aa(),
+                      imageofuni: "images/shabwa1.png",
                     ),
                     homebagecard(
-                      colorofuni: Colors.tealAccent,
-                      nameofuni: "تكنولوجيا المعلومات",
+                      nameofuni: "",
                       nameofpage: aa(),
+                      imageofuni: "images/shabwa1.png",
                     ),
                     homebagecard(
-                      colorofuni: Colors.tealAccent,
-                      nameofuni: "تكنولوجيا المعلومات",
+                      nameofuni: "",
                       nameofpage: aa(),
+                      imageofuni: "images/shabwa1.png",
                     ),
                   ],
                 ),

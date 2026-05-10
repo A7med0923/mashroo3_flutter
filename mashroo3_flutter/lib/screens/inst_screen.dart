@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:mashroo3_flutter/utils/constants.dart';
 import 'package:mashroo3_flutter/widgets/custom_unicard.dart';
+import 'package:mashroo3_flutter/data/inst_list.dart';
 
 class InstScreen extends StatelessWidget {
   const InstScreen({super.key});
@@ -8,20 +10,29 @@ class InstScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("المعاهد"),
+        backgroundColor: sccolor,
+        title: Text("المعاهد",style: TextStyle(fontSize: 20,color: maincolor),),
       ),
-      body: Container(
-        child: SingleChildScrollView(
-          child: Column(
-            children: [
-              Row(
-                children: [
-                  UniCard(colorofcard: Colors.greenAccent, imageofcard: "images/shabwa1.png", nameofuni: "معهد شبوة", countofcolleg: "تخصصات : 9",ontap: () {},)
-                ],
-              )
-            ],
-          ),
+      backgroundColor: maincolor,
+      body: GridView.builder(
+        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+          crossAxisCount: 2,
         ),
+        itemCount: institutes.length,
+        itemBuilder: (context, index) {
+          return UniCard(
+            colorofcard: institutes[index].colorofcard,
+            imageofcard: institutes[index].imageofcard,
+            nameofuni: institutes[index].nameofinst,
+            countofcolleg: institutes[index].countofturn,
+            ontap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => institutes[index].ontap),
+              );
+            },
+          );
+        },
       ),
     );
   }

@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:mashroo3_flutter/utils/constants.dart';
 
-class InstInfoScreen extends StatelessWidget {
-  final Color colorofcards = const Color.fromARGB(255, 86, 161, 107);
-  final int countofdo;
+class TurnInfoScreen extends StatelessWidget {
+  final Color colorofcards = maincolor;
+  final String countofdo;
   final String nameofmajor;
   final String infoaboutmajor;
   final String emailofuni;
   final int phoneofuni;
-  const InstInfoScreen({
+  TurnInfoScreen({
     super.key,
     required this.countofdo,
     required this.nameofmajor,
@@ -42,7 +43,7 @@ class InstInfoScreen extends StatelessWidget {
                 ListTile(
                   title: Text("عدد الدورات"),
                   subtitle: Text(
-                    "دورات $countofdo",
+                    countofdo,
                     style: TextStyle(fontSize: 20, color: Colors.black),
                   ),
                   trailing: Text(

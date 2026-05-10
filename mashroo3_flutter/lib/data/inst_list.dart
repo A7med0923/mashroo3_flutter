@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mashroo3_flutter/models/inst_model.dart';
 import 'package:mashroo3_flutter/screens/details_screen.dart';
+import 'package:mashroo3_flutter/screens/smart_inst_screen.dart';
 
 List<InstModel> institutes = [
   InstModel(
@@ -8,6 +9,6 @@ List<InstModel> institutes = [
     countofturn: "3 دورات",
     imageofcard: "images/smart.png",
     nameofinst: "معهد سمارت",
-    ontap: aa(),
+    ontap: SmartInstScreen(),
   ),
 ];
