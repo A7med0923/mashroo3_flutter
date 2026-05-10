@@ -19,7 +19,12 @@ class Uniscreen extends StatelessWidget {
             imageofcard: unilist[index].imageofcard,
             nameofuni: unilist[index].nameofuni,
             countofcolleg: unilist[index].countofcolleg,
-            ontap: unilist[index].ontap,
+            ontap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => unilist[index].ontap),
+              );
+            },
           );
         },
       ),

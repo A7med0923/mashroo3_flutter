@@ -7,8 +7,7 @@ class CollegModel {
   final String countofmajor;
   final String imageofuni;
   final String nameofcollge;
-  final Color colorofcard = Colors.blue;
-  
+  final Color colorofcard;
 
   CollegModel({
     required this.majorsofcolleg,
@@ -16,5 +15,6 @@ class CollegModel {
     required this.countofmajor,
     required this.imageofuni,
     required this.nameofcollge,
+    required this.colorofcard
   });
 }

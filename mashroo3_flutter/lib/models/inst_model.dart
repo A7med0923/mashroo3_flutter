@@ -1,17 +1,16 @@
 import 'package:flutter/material.dart';
-
-class Universities {
-  final String nameofuni;
-  final String countofcolleg;
+class InstModel {
+  final String nameofinst;
+  final String countofturn;
   final Color colorofcard;
   final String imageofcard;
   final Widget ontap;
 
-  Universities({
+  InstModel({
     required this.colorofcard,
-    required this.countofcolleg,
+    required this.countofturn,
     required this.imageofcard,
-    required this.nameofuni,
+    required this.nameofinst,
     required this.ontap,
     });
 }

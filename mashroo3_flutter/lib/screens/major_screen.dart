@@ -35,7 +35,6 @@ class MajorScreen extends StatelessWidget {
                     jobs: majorlist[index].jobs,
                     emailofuni: majorlist[index].emailofuni,
                     phoneofuni: majorlist[index].phoneofuni,
-                    colorofcards: majorlist[index].colorofcards,
                   ),
                 ),
               );

@@ -1,6 +1,5 @@
 import 'package:mashroo3_flutter/screens/home_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:mashroo3_flutter/screens/details_screen.dart';
 import 'package:mashroo3_flutter/screens/inst_screen.dart';
 import 'package:mashroo3_flutter/screens/uniscreen.dart';
 
@@ -24,7 +23,6 @@ class _RootScreenState extends State<RootScreen> {
       HomeScreen(changePage: changePage),
       Uniscreen(),
       InstScreen(),
-      aa(),
     ];
     return Scaffold(
       extendBody: true,
@@ -52,10 +50,6 @@ class _RootScreenState extends State<RootScreen> {
           BottomNavigationBarItem(
             icon: Icon(Icons.school_outlined),
             label: "المعاهد",
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.settings),
-            label: "الإعدادات",
           ),
         ],
       ),
