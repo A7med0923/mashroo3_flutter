@@ -10,7 +10,7 @@ List<CollegModel> mojtm3majors = [
         countofmajor: "%60 نسبة القبول",
         colorofcard: Colors.grey,
         imageofuni: "images/mojtm3.png",
-        nameofcollge: "هندسة تكييف وتبريد 77",
+        nameofcollge: "هندسة تكييف وتبريد",
         onTap: () {},
         degreeOfMajor: "الدبلوم",
         emailofuni: "email@email.com",
