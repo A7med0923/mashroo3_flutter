@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:mashroo3_flutter/utils/constants.dart';
 
 class MajorsInfoScreen extends StatelessWidget {
-  final Color colorofcards = const Color.fromARGB(255, 94, 181, 234);
+  final Color colorofcards = thrdcolor;
   final String degreeOfMajor;
   final String typeOfHighSchool;
   final int yersofstudy;
@@ -11,7 +12,7 @@ class MajorsInfoScreen extends StatelessWidget {
   final List<String> jobs;
   final String emailofuni;
   final int phoneofuni;
-  const MajorsInfoScreen({
+  MajorsInfoScreen({
     super.key,
     required this.degreeOfMajor,
     required this.typeOfHighSchool,
@@ -27,6 +28,7 @@ class MajorsInfoScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: maincolor,
       appBar: AppBar(title: Text(nameofmajor), backgroundColor: colorofcards),
       body: ListView(
         children: [

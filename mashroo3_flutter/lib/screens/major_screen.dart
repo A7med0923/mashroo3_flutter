@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mashroo3_flutter/models/majors_model.dart';
 import 'package:mashroo3_flutter/screens/majors_info_screen.dart';
+import 'package:mashroo3_flutter/utils/constants.dart';
 import 'package:mashroo3_flutter/widgets/custom_colleg_card.dart';
 
 class MajorScreen extends StatelessWidget {
@@ -11,7 +12,11 @@ class MajorScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text(title)),
+      backgroundColor: maincolor,
+      appBar: AppBar(
+        backgroundColor: sccolor,
+        title: Text(title)
+        ),
       body: ListView.builder(
         itemCount: majorlist.length,
         itemBuilder: (context, index) {

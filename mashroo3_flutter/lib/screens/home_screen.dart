@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:mashroo3_flutter/screens/mojtm3_uni_screen.dart';
 import 'package:mashroo3_flutter/screens/quran_uni_screen.dart';
 import 'package:mashroo3_flutter/screens/shabwa_uni_screen.dart';
+import 'package:mashroo3_flutter/screens/smart_inst_screen.dart';
 import 'package:mashroo3_flutter/utils/constants.dart';
 import 'package:mashroo3_flutter/widgets/custom_card.dart';
-import 'details_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   final Function(int) changePage;
@@ -89,23 +89,8 @@ class _HomeScreenState extends State<HomeScreen> {
                 child: Row(
                   children: [
                     homebagecard(
-                      nameofuni: "",
-                      nameofpage: aa(),
-                      imageofuni: "images/shabwa1.png",
-                    ),
-                    homebagecard(
-                      nameofuni: "",
-                      nameofpage: aa(),
-                      imageofuni: "images/shabwa1.png",
-                    ),
-                    homebagecard(
-                      nameofuni: "",
-                      nameofpage: aa(),
-                      imageofuni: "images/shabwa1.png",
-                    ),
-                    homebagecard(
-                      nameofuni: "",
-                      nameofpage: aa(),
+                      nameofuni: "معهد سمارت",
+                      nameofpage: SmartInstScreen(),
                       imageofuni: "images/shabwa1.png",
                     ),
                   ],
